@@ -1,0 +1,32 @@
+.header {
+  background: $off-blueblack;
+  color: white;
+  margin-bottom: $m-size;
+  padding: $m-size;
+  cursor: pointer;
+}
+
+.header:hover {
+  background: white;
+  color: $off-blueblack;
+  opacity: 0.8;
+  transition: all 900ms ease-out;
+}
+
+.header__title {
+  font-size: $l-size;
+  margin: 0;
+}
+
+.header__subtitle {
+  font-size: $m-size;
+  font-weight: 500;
+  padding-top: $s-size;
+  margin: 0;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .header {
+    margin-bottom: $xl-size;
+  }
+}

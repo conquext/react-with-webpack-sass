@@ -1,0 +1,52 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "A React project boilerplate",
+  "main": "app.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "dev-server": "webpack-dev-server"
+  },
+  "dependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "css-loader": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "live-server": "^1.2.0",
+    "node-sass": "^4.12.0",
+    "normalize.css": "^8.0.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "sass-loader": "7.3.1",
+    "style-loader": "0.18.2",
+    "validator": "8.0.0",
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/conquext/react-with-webpack-sass.git"
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "sass",
+    "css",
+    "babel",
+    "boilerplate",
+    "template"
+  ],
+  "bugs": {
+    "url": "https://github.com/conquext/react-with-webpack-sass/issues"
+  },
+  "homepage": "https://github.com/conquext/react-with-webpack-sass/#readme"
+}
