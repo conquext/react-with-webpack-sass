@@ -6,7 +6,7 @@ module.exports = env => {
   const isProduction = env === "production";
   const CSSExtract = new ExtractTextPlugin("styles.css");
   return {
-    entry: "./src/app.js",
+    entry: ["babel-polyfill", "./src/app.js"],
     output: {
       path: path.join(__dirname, "dist"),
       filename: "bundle.js"
@@ -21,7 +21,20 @@ module.exports = env => {
         {
           test: /\.s?css$/,
           use: CSSExtract.extract({
-            use: ["css-loader", "sass-loader"]
+            use: [
+              {
+                loader: "css-loader",
+                options: {
+                  sourceMap: true
+                }
+              },
+              {
+                loader: "sass-loader",
+                options: {
+                  sourceMap: true
+                }
+              }
+            ]
           })
         }
       ]
@@ -35,7 +48,8 @@ module.exports = env => {
     devtool: isProduction ? "source-map" : "cheap-module-eval-source-map",
     devServer: {
       contentBase: path.join(__dirname, "public"),
-      historyApiFallback: true
+      historyApiFallback: true,
+      publicPath: "/dist"
     }
   };
 };
